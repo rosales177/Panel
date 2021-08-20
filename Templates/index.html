@@ -1,6 +1,17 @@
-<html>
-    <body>
-        <h1>Hola Mundo</h1>
-        <a href="{% url 'app:crud' %}">CRUD</a>
-    </body>
-</html>
+
+{% extends 'base.html' %}
+{% block title %}
+<title>Home</title>
+{% endblock %}
+
+{% block content %}  
+{% include 'includes/nav.html' %}
+<h1>Hola Mundo</h1>
+
+
+{% endblock %}
+{% load static %}
+{% block javascript %}
+    <script src="{% static 'js/app.js' %}"></script>
+{% endblock javascript %}
+        

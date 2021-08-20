@@ -120,4 +120,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILE_DIR = [os.path.join(BASE_DIR,'static')]
+STATICFILE_DIR = [os.path.join(BASE_DIR,'Crud/static/')]
