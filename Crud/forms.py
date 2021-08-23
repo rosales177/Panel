@@ -6,5 +6,5 @@ class ProductForm(ModelForm):
 
         model = Productos
 
-        fields = ('cod_product','description','category','price','stock')
-
+        # fields = ('cod_product','description','category','price','stock')
+        fields = '__all__'

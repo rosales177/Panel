@@ -1,2 +1,5 @@
-alert('Hola')
-console.log('Mundo')
+$(function(){
+
+    console.log('Hola')
+
+});

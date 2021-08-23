@@ -2,49 +2,49 @@
 {% block title %}
 <title>CRUD</title>
 {% endblock %}
-
+{% load svg %}
 {% block content %}  
 {% include 'includes/nav.html' %}
 
-<div class="container pt-5">
-    <div class="pt-5">
+<main class="contenedor">
+    <div style="width: 200px;">
+    <a href="{% url 'app:create' %}" class="btn svg btn-primary btn-margin">{% svg 'add'%} Add New Product</a>
+    </div>
+    <div>
+        <table class="table">
+            <thead class="table-dark ">
+                <tr>
+                    <th scope="row">Codigo</th>
+                    <th scope="row">Descripcion</th>
+                    <th scope="row">Fecha de Creacion</th>
+                    <th scope="row">Categoria</th>
+                    <th scope="row">Precio</th>
+                    <th scope="row">Stock</th>
+                    <th colspan="2" scope="row">Aciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for producto in productos %}
+                <tr>
+                    <td>{{producto.cod_product}}</td>
+                    <td>{{producto.description}}</td>
+                    <td>{{producto.create}}</td>
+                    <td>{{producto.category}}</td>
+                    <td>s/{{producto.price}}</td>
+                    <td>{{producto.stock}}</td>
+                    <td style="width: 30px;">
+                        <a href="{% url 'app:update' producto.cod_product%}" class="btn btn-success svg">{% svg 'update'%}</a>
+                    </td>
+                    <td style="width: 30px;">
+                        <a href="{% url 'app:delete' producto.cod_product%}" class="btn btn-danger svg">{% svg 'delete'%}</a>
+                    </td>
+                </tr>
 
-
-    <a href="{% url 'app:create' %}">New Product</a>
-<table class="table">
-    <thead class="table-dark">
-        <tr>
-            <th scope="row">Codigo</th>
-            <th scope="row">Descripcion</th>
-            <th scope="row">Fecha de Creacion</th>
-            <th scope="row">Categoria</th>
-            <th scope="row">Precio</th>
-            <th scope="row">Stock</th>
-            <th colspan="2" scope="row">Aciones</th>
-        </tr>
-    </thead>
-    <tbody>
-    {% for producto in productos %}
-        <tr>
-            <td>{{producto.cod_product}}</td>
-            <td>{{producto.description}}</td>
-            <td>{{producto.create}}</td>
-            <td>{{producto.category}}</td>
-            <td>{{producto.price}}</td>
-            <td>{{producto.stock}}</td>
-            <td>
-                <a href="{% url 'app:update' producto.cod_product%}">Update</a>
-            </td>
-            <td>
-                <a href="{% url 'app:delete' producto.cod_product%}">Delete</a>
-            </td>
-        </tr>
-
-    {% endfor %}
-    </tbody>
-</table>
-</div>
-</div>
+            {% endfor %}
+            </tbody>
+        </table>  
+    </div>
+</main>
 {% endblock %}
     
 

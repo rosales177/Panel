@@ -1,3 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 *{
-    color: brown;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.contenedor{
+    width: 70%;
+    margin-left: 15%;
+}
+.navbar{
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background-color: rgb(24, 24, 24);
+}
+.nav-link{
+    color: white;
+    text-decoration: none;
+    margin-left: 30px ;
+}
+.nav-link:hover{
+    color: rgb(156, 156, 156);
+}
+.table {
+    width: 100%;
+    border: 1px solid silver;
+    border-collapse: collapse
+
+}
+.table td{
+    padding: 15px;
+    text-align: left;
+}
+.table th{
+    padding: 15px;
+    text-align: center;
+}
+.table tr:nth-child(even) {
+    background-color: #dfdfdf;
+}
+.table th{
+    color: white;
+    background-color: rgb(24, 24, 24);
+}
+.btn{
+   
+    text-decoration: none;
+    padding: 10px 10px;
+    text-align:center;
+    border-radius: 5px;
+    display: inline-block; 
+}
+.btn-primary{
+    background-color: royalblue;
+    color: white;
+}
+.btn-success{
+    background-color: green;
+    color: white;
+}
+
+.btn-danger{
+    background-color: red;
+    color: white;
+}
+
+.btn-input{
+    border: none;
+    color: white;
+    padding: 10px 90px;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 9%;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 30px;
+}
+.contenedor-form{
+    width: 60%;
+    margin-top:50px;
+    margin-left: 20%;
+    border: 3px solid #3555FE;
+    border-radius: 5px;
+}
+.form{
+    margin-top: 50px;
+    width: 80%;
+    margin-left: 10%;
+    padding-bottom: 50px;
+}
+.numberinput, .textinput{
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: 1px solid silver;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+.numberinput:focus,.textinput:focus{
+    border: 3px solid #3555FE;
+}
+.invalid-feedback{
+    color: red;
+    padding: 20px;
+}
+.btn-margin{
+    margin: 30px 0;
+}
+.svg{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    
+}
+.th-svg{
+    fill: rgba(255,255,255, 1);
+}
+
+.btn:hover > .th-svg {
+    fill:rgb(0, 0, 0,1)
 }

@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Crud',
+    'crispy_forms',
+    'svg',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +123,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILE_DIR = [os.path.join(BASE_DIR,'Crud/static/')]
+
+SVG_DIRS=[os.path.join(BASE_DIR,'Crud/assets/')]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

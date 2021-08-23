@@ -4,13 +4,21 @@
 <title>Home</title>
 {% endblock %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}  
-<form method="POST">
-    {% csrf_token %}
+<main class="contenedor-form">
+    <form method="POST" class="form" autocomplete="off">
+        {% csrf_token %}
 
-    {{update.as_p}}
+        {{update|crispy}}
 
-    <button type="submit">Save</button>
-</form>
+        <div >
+            <input type="submit" class="btn-input btn-success">
+            <a href="{% url 'app:crud' %}" class="btn-input btn-danger">Cancelar</a>
+        </div>
+
+    </form>
+</main>
 {% endblock %}
     
