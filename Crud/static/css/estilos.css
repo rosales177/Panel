@@ -62,7 +62,7 @@
     display: inline-block; 
 }
 .btn-primary{
-    background-color: royalblue;
+    background-color: #0066b3;
     color: white;
 }
 .btn-success{
@@ -71,7 +71,7 @@
 }
 
 .btn-danger{
-    background-color: red;
+    background-color: #b30000;
     color: white;
 }
 
@@ -91,15 +91,13 @@
     height: 100vh;
     margin-top:50px;
     margin-left: 20%;
-    border: 1px solid red;
     
 }
 .form{
     width: 80%;
-    margin-left: 4%;
+    margin: auto;
     padding-bottom: 50px;
-    border: 3px solid #3555FE;
-    border-radius: 5px;
+    border: 3px solid #0092ff;
     padding: 50px;
 }
 .numberinput, .textinput{
@@ -132,12 +130,39 @@
 }
 
 .btn:hover > .th-svg {
-    fill:rgb(0, 0, 0,1)
+    fill:rgb(0, 0, 0,1);
+    transition: fill .5s;
+}
+.btn:hover > h5 {
+    color:rgb(0, 0, 0,1);
+    transition: color .5s;
 }
 
+.btn-success:hover{
+    background-color: #00b300;
+    transition: background-color .5s;
+}
+.btn-danger:hover{
+    background-color: #ff0000;
+    transition: background-color .5s;
+}
+.btn-primary:hover{
+    background-color: #0092ff;
+    transition: background-color .5s;
+}
 footer{
     background-color: rgb(24, 24, 24);
     color: white;
     padding: 20px 0;
+    text-align: center;
+}
+.title-form{
+    width: 92.3%;
+    margin: auto;
+    border: 3px solid #0092ff;
+    background-color: #0092ff;
+}
+.title-form > h2{
+    color: white;
     text-align: center;
 }
