@@ -8,7 +8,10 @@
 
 {% block content %}  
 <main class="contenedor-form">
-    <form method="POST" class="form" autocomplete="off">
+    <div class="title-form-update">
+        <h2>Update Product</h2>
+    </div>
+    <form method="POST" class="form-update" autocomplete="off">
         {% csrf_token %}
 
         {{update|crispy}}

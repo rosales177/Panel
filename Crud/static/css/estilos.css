@@ -6,8 +6,12 @@
     font-family: 'Poppins', sans-serif;
 }
 .main-index{
-    width: 100%;
-    height: 100vh;
+    padding: 100px 0 100px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+
 }
 .contenedor{
     width: 70%;
@@ -93,12 +97,17 @@
     margin-left: 20%;
     
 }
-.form{
-    width: 80%;
+.form-create, .form-update{
+    width: 92.4%;
     margin: auto;
     padding-bottom: 50px;
-    border: 3px solid #0092ff;
     padding: 50px;
+}
+.form-create{
+    border: 3px solid #0092ff;
+}
+.form-update{
+    border: 3px solid #00b300;
 }
 .numberinput, .textinput{
     width: 100%;
@@ -156,13 +165,20 @@ footer{
     padding: 20px 0;
     text-align: center;
 }
-.title-form{
+.title-form-create,.title-form-update{
     width: 92.3%;
     margin: auto;
+    
+}
+.title-form-create{
     border: 3px solid #0092ff;
     background-color: #0092ff;
 }
-.title-form > h2{
+.title-form-update{
+    border: 3px solid #00b300;
+    background-color: #00b300;
+}
+.title-form-create > h2, .title-form-update > h2{
     color: white;
     text-align: center;
 }

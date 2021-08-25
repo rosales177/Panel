@@ -6,10 +6,10 @@
 {% load crispy_forms_tags %}
 {% block content %}  
 <main class="contenedor-form">
-    <div class="title-form">
+    <div class="title-form-create">
         <h2>Add New Product</h2>
     </div>
-    <form method="POST" class="form">
+    <form method="POST" class="form-create">
         {% csrf_token %}
         {{form|crispy}}
         <input type="submit" value='Crear' class="btn-input btn-success">

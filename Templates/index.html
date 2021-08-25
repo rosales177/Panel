@@ -1,15 +1,94 @@
 
 {% extends 'base.html' %}
 {% block title %}
+
 <title>Home</title>
 {% endblock %}
 
 {% block content %}  
 
 {% include 'includes/nav.html' %}
+{% load static %}
 
-<main class="main-index">
-<h1>Hola Mundo</h1>
+<main>
+    <section class="main-index">
+        <h2 class="TituloH2">Objetivos del Proyecto</h2>
+        <div class="Galeria">
+            <div class="galeria_img">
+                <img src="{% static 'image/gl1.png' %}" alt="">
+                <p>Crear una página web con las vistas a la altura de los estandares del profesor</p>
+            </div>
+            <div class="galeria_img">
+                <img src="{% static 'image/gl2.jpg' %}" alt="">
+                <p>Poder conectarnos a una base de datos con exito</p>
+            </div>
+            <div class="galeria_img">
+                <img src="{% static 'image/gl3.png' %}" alt="">
+                <p>Crear, leer, actualizar y eliminar datos de una base de datos con php</p>
+            </div>
+            <div class="galeria_img">
+                <img src="{% static 'image/gl4.jpg' %}" alt="">
+                <p>Sacarme un 20</p>
+            </div>
+        </div>
+    </section>
+    <section class="contenedor_caracteristicas">
+        <div class="contenedor2">
+            <h2 class="TituloH2">Caracteristicas de la Base de Datos</h2>
+            <h3 style="color: #2c698d;">Tema :</h3>
+            <div class="con-carat">
+                 
+                <div class="parrafo">
+                    <p>La Base de Datos tiene una tematica acerca del 
+                        matenimientos de los clientes de una empresa 
+                        de servicio de Internet y consta de los siguienes atributos :</p>
+                    <lu>
+                        <li>1.- Datos Personales de los clientes.</li>
+                        <li>2.- Datos de los empleados registrados</li>
+                        <li>3.- Credenciales de los administradores del portal</li>
+                    </lu>
+                    
+                </div>
+                <div class="img_referencial">
+                    <img  src="{% static 'image/referencia1.jpg' %}">
+                </div>
+                <div class="img_referencial">
+                    <img src="{% static 'image/referencia2.jpg' %}">
+                </div>
+                <div class="img_referencial">
+                    <img src="{% static 'image/referencia3.jpg' %}">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="herramientas">
+        <div class="contenedor3">
+            <h2 class="TituloH2"> Herramienta Empleadas</h2>
+            <div class="cont_herramientas">
+                <div class="contenido">
+                    <img id="imgif" src="{% static 'image/django.png' %}">
+                    <div class="img_info">
+                        <h4>Django</h4>
+                        <p>Uizard es una herramienta para crear maquetas
+                        y diseños de paginas web, es interactivo y sobre 
+                        todo gratis.</p>
+                    </div>
+                </div>
+                <div class="contenido">
+                    <div class="cont_img">
+                        <img src="image/herramienta2.svg">
+                    </div>
+                    <div class="img_info">
+                        <h4>Coloors</h4>
+                        <p>Coolors es una herramienta gratuita que facilita
+                        la combinacion de colores.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
 </main>
 {% endblock %}
 {% load static %}
