@@ -40,7 +40,7 @@ def Update(request,id):
             form.save()
             return redirect('app:crud')
     else: 
-        form = ProductForm()
+        form = ProductForm(instance=product)
     context =  {'update': form}
     return render(request, 'update.html', context)
 
